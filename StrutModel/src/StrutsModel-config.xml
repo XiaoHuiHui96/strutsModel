@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<struts-config>
+	<form-beans>  
+        <form-bean name="loginForm" type="com.struts.actionform.LoginActionForm"/>  
+    </form-beans>  
+	
+	 <action-mappings>  
+        <action path="login"   
+                type="com.struts.SumAction.logAction"  
+                name="loginForm"          
+                scope="request">  
+        <forward name="success" path="/login_success.jsp" />  
+        <forward name="error" path="/login_error.jsp"/>         
+        </action>  
+    </action-mappings>
+</struts-config>
